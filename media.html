@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Media & Gallery | Queensol Energy India Pvt Ltd</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Solar Projects, Solar Gallery, Events, Inverter Installation, Queensol India" name="keywords">
+    <meta content="Explore Queensol Energy's video showcase, factory tours, and project installation gallery across commercial and residential sites." name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&family=Roboto:wght@500;700;900&display=swap" rel="stylesheet"> 
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        .gallery-filter-btn {
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 8px 24px;
+            transition: all 0.3s ease;
+        }
+        .gallery-card {
+            cursor: pointer;
+            border-radius: 15px;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        .gallery-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        .gallery-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(26, 42, 54, 0.85);
+            opacity: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+        .gallery-card:hover .gallery-overlay {
+            opacity: 1;
+        }
+        .gallery-badge {
+            background-color: var(--primary);
+            color: #ffffff;
+            font-size: 11px;
+            font-weight: bold;
+            padding: 4px 10px;
+            border-radius: 50px;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 3;
+        }
+        
+        /* Lightbox CSS */
+        .lightbox-modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 99999;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .lightbox-modal.show {
+            display: flex;
+            opacity: 1;
+        }
+        .lightbox-content {
+            max-width: 90%;
+            max-height: 80%;
+            position: relative;
+        }
+        .lightbox-img {
+            max-width: 100%;
+            max-height: 80vh;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+        .lightbox-caption {
+            color: #ffffff;
+            text-align: center;
+            margin-top: 15px;
+            font-size: 16px;
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            color: #ffffff;
+            font-size: 35px;
+            cursor: pointer;
+            z-index: 100000;
+        }
+        .lightbox-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #ffffff;
+            font-size: 40px;
+            cursor: pointer;
+            user-select: none;
+            z-index: 100000;
+            padding: 10px;
+        }
+        .lightbox-prev {
+            left: 30px;
+        }
+        .lightbox-next {
+            right: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+            <span class="sr-only">Loading...</span>
+        </div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-dark p-0">
+        <div class="row gx-0 d-none d-lg-flex">
+            <div class="col-lg-7 px-5 text-start">
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <small class="fa fa-envelope text-primary me-2"></small>
+                    <small>info@queensolenergy.in</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center">
+                    <small class="far fa-clock text-primary me-2"></small>
+                    <small>Mon - Sat : 09:30 AM - 06:30 PM</small>
+                </div>
+            </div>
+            <div class="col-lg-5 px-5 text-end">
+                <div class="h-100 d-inline-flex align-items-center me-4">
+                    <small class="fa fa-phone-alt text-primary me-2"></small>
+                    <small>+91 98765 43210</small>
+                </div>
+                <div class="h-100 d-inline-flex align-items-center mx-n2">
+                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i class="fab fa-twitter"></i></a>
+                    <a class="btn btn-square btn-link rounded-0 border-0 border-end border-secondary" href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a class="btn btn-square btn-link rounded-0" href=""><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-xl bg-white navbar-light sticky-top p-0">
+        <a href="index.html" class="navbar-brand d-flex align-items-center border-end px-4 px-xl-5">
+            <img src="img/Queensol%20Energy%20India%20Pvt%20Ltd%20logo%20final%20(1).png" alt="Queensol Energy Logo" style="height: 55px; max-height: 55px;">
+        </a>
+        <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <div class="navbar-nav ms-auto p-4 p-lg-0">
+                <a href="index.html" class="nav-item nav-link">Home</a>
+                <a href="about.html" class="nav-item nav-link">About Us</a>
+                <a href="products.html" class="nav-item nav-link">Products</a>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Solar Panel</a>
+                    <div class="dropdown-menu bg-light m-0">
+                        <h6 class="dropdown-header text-primary fw-bold border-bottom pb-1 mb-1">Solar Panel Brands</h6>
+                        <a href="products.html?brand=swelect" class="dropdown-item">SWELECT</a>
+                        <a href="products.html?brand=saatvik" class="dropdown-item">Saatvik Green Energy</a>
+                        <a href="products.html?brand=vikram" class="dropdown-item">Vikram Solar</a>
+                        <a href="products.html?brand=jinko" class="dropdown-item">Jinko Solar</a>
+                        <a href="products.html?brand=ja-solar" class="dropdown-item">JA Solar</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Solar Inverters</a>
+                    <div class="dropdown-menu bg-light m-0">
+                        <h6 class="dropdown-header text-primary fw-bold border-bottom pb-1 mb-1">Inverter Brands</h6>
+                        <a href="products.html?brand=solis" class="dropdown-item">Solis</a>
+                        <a href="products.html?brand=sungrow" class="dropdown-item">Sungrow</a>
+                    </div>
+                </div>
+                <div class="nav-item dropdown">
+                    <a href="service.html" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                    <div class="dropdown-menu bg-light m-0">
+                        <h6 class="dropdown-header text-primary fw-bold border-bottom pb-1 mb-1">All Services</h6>
+                        <a href="service.html?service=consulting" class="dropdown-item">Solar Consulting Services</a>
+                        <a href="service.html?service=epc" class="dropdown-item">Project EPC Services</a>
+                        <a href="service.html?service=management" class="dropdown-item">Management Consulting</a>
+                        <a href="service.html?service=after-sales" class="dropdown-item">After Sales Service</a>
+                        <a href="service.html?service=integrator" class="dropdown-item">System Integrator Services</a>
+                    </div>
+                </div>
+                <a href="media.html" class="nav-item nav-link active">Media</a>
+                <a href="blog.html" class="nav-item nav-link">Blog</a>
+                <a href="careers.html" class="nav-item nav-link">Careers</a>
+                <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+            </div>
+            <a href="contact.html#queensolQuoteForm" class="btn btn-primary rounded-0 py-4 px-xl-4 d-none d-xl-block">Request a Quote<i class="fa fa-arrow-right ms-3"></i></a>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header Start -->
+    <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <h1 class="display-3 text-white mb-3 animated slideInDown">Media Gallery</h1>
+            <nav aria-label="breadcrumb animated slideInDown">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                    <li class="breadcrumb-item text-white active" aria-current="page">Media</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    <!-- Page Header End -->
+
+
+    <!-- Video Showcase Start -->
+    <div class="container-xxl py-5 bg-light">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h6 class="text-primary text-uppercase font-weight-bold">Video Showcase</h6>
+                <h1 class="mb-4 text-navy">Watch Us In Action</h1>
+                <p class="text-muted">Explore our project walk-throughs, educational solar guides, and manufacturing insights.</p>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="bg-white p-3 rounded-3 shadow-sm border h-100">
+                        <div class="ratio ratio-16x9 rounded overflow-hidden border">
+                            <iframe src="https://www.youtube.com/embed/0lh_UWF9FM4" title="How Solar Energy Works" allowfullscreen></iframe>
+                        </div>
+                        <h4 class="text-navy mt-3">How Solar Energy Works</h4>
+                        <p class="text-muted small mb-0 mt-2">A clear, scientific explanation of how photovoltaic panels convert sunlight into clean electricity.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="bg-white p-3 rounded-3 shadow-sm border h-100">
+                        <div class="ratio ratio-16x9 rounded overflow-hidden border">
+                            <iframe src="https://www.youtube.com/embed/zJg5n4qQdJw" title="Solis Inverter Factory Tour" allowfullscreen></iframe>
+                        </div>
+                        <h4 class="text-navy mt-3">Solis Inverter Factory Tour</h4>
+                        <p class="text-muted small mb-0 mt-2">A behind-the-scenes look at the high-technology manufacturing facility where Solis inverters are built and tested.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Video Showcase End -->
+
+
+    <!-- Image Gallery Start -->
+    <div class="container-xxl py-5">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
+                <h6 class="text-primary text-uppercase font-weight-bold">Project Gallery</h6>
+                <h1 class="mb-4 text-navy">Events & Project Gallery</h1>
+                <p class="text-muted">A glimpse of Queensol projects, events, and the teams that bring clean energy to life.</p>
+            </div>
+
+            <!-- Filter Controls -->
+            <div class="d-flex flex-wrap justify-content-center gap-2 mb-5" id="gallery-filters">
+                <button class="btn btn-primary gallery-filter-btn" data-filter="All">All Projects</button>
+                <button class="btn btn-outline-secondary gallery-filter-btn" data-filter="Installation">Installation</button>
+                <button class="btn btn-outline-secondary gallery-filter-btn" data-filter="EPC Services">EPC Services</button>
+                <button class="btn btn-outline-secondary gallery-filter-btn" data-filter="Residential">Residential</button>
+                <button class="btn btn-outline-secondary gallery-filter-btn" data-filter="Inverters">Inverters</button>
+                <button class="btn btn-outline-secondary gallery-filter-btn" data-filter="Logistics">Logistics</button>
+                <button class="btn btn-outline-secondary gallery-filter-btn" data-filter="Consulting">Consulting</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="row g-4" id="gallery-grid">
+                <!-- Card 1 -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="Installation">
+                    <div class="gallery-card" onclick="openLightbox(0)">
+                        <span class="gallery-badge">Installation</span>
+                        <img class="img-fluid w-100 object-cover aspect-[4/3]" src="img/gallery-1.jpg" alt="Commercial Rooftop Solar">
+                        <div class="gallery-overlay">
+                            <h4 class="text-white mb-2">Commercial Rooftop Solar</h4>
+                            <p class="text-white-50 small">A 150kW grid-tied rooftop solar power plant installed for a manufacturing facility in Pune.</p>
+                            <span class="btn btn-sm btn-primary rounded-pill mt-2"><i class="fa fa-search-plus me-1"></i>View Image</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="EPC Services">
+                    <div class="gallery-card" onclick="openLightbox(1)">
+                        <span class="gallery-badge">EPC Services</span>
+                        <img class="img-fluid w-100 object-cover aspect-[4/3]" src="img/gallery-2.jpg" alt="Industrial EPC Project">
+                        <div class="gallery-overlay">
+                            <h4 class="text-white mb-2">Industrial EPC Project</h4>
+                            <p class="text-white-50 small">Engineering, procurement, and construction of a solar farm enabling clean power for C&I client.</p>
+                            <span class="btn btn-sm btn-primary rounded-pill mt-2"><i class="fa fa-search-plus me-1"></i>View Image</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 3 -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="Residential">
+                    <div class="gallery-card" onclick="openLightbox(2)">
+                        <span class="gallery-badge">Residential</span>
+                        <img class="img-fluid w-100 object-cover aspect-[4/3]" src="img/gallery-3.jpg" alt="Residential Solar PV">
+                        <div class="gallery-overlay">
+                            <h4 class="text-white mb-2">Residential Solar PV</h4>
+                            <p class="text-white-50 small">High-efficiency mono PERC module installation on a residential rooftop for self-consumption.</p>
+                            <span class="btn btn-sm btn-primary rounded-pill mt-2"><i class="fa fa-search-plus me-1"></i>View Image</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 4 -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="Inverters">
+                    <div class="gallery-card" onclick="openLightbox(3)">
+                        <span class="gallery-badge">Inverters</span>
+                        <img class="img-fluid w-100 object-cover aspect-[4/3]" src="img/gallery-4.jpg" alt="Solar Inverter Commissioning">
+                        <div class="gallery-overlay">
+                            <h4 class="text-white mb-2">Solar Inverter Commissioning</h4>
+                            <p class="text-white-50 small">Solis commercial string inverters successfully mounted and commissioned with smart monitoring.</p>
+                            <span class="btn btn-sm btn-primary rounded-pill mt-2"><i class="fa fa-search-plus me-1"></i>View Image</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 5 -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="Logistics">
+                    <div class="gallery-card" onclick="openLightbox(4)">
+                        <span class="gallery-badge">Logistics</span>
+                        <img class="img-fluid w-100 object-cover aspect-[4/3]" src="img/gallery-5.jpg" alt="Authorized Warehouse Stock">
+                        <div class="gallery-overlay">
+                            <h4 class="text-white mb-2">Authorized Warehouse Stock</h4>
+                            <p class="text-white-50 small">Our stocking hubs keeping ready inventory of premium Tier-1 solar panels and accessories.</p>
+                            <span class="btn btn-sm btn-primary rounded-pill mt-2"><i class="fa fa-search-plus me-1"></i>View Image</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 6 -->
+                <div class="col-md-6 col-lg-4 gallery-item" data-category="Consulting">
+                    <div class="gallery-card" onclick="openLightbox(5)">
+                        <span class="gallery-badge">Consulting</span>
+                        <img class="img-fluid w-100 object-cover aspect-[4/3]" src="img/gallery-6.jpg" alt="On-Site Technical Survey">
+                        <div class="gallery-overlay">
+                            <h4 class="text-white mb-2">On-Site Technical Survey</h4>
+                            <p class="text-white-50 small">Detailed site engineering survey and feasibility study conducted by our solar experts.</p>
+                            <span class="btn btn-sm btn-primary rounded-pill mt-2"><i class="fa fa-search-plus me-1"></i>View Image</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Image Gallery End -->
+
+
+    <!-- Fullscreen Lightbox Modal -->
+    <div class="lightbox-modal" id="lightbox-modal" onclick="closeLightbox(event)">
+        <span class="lightbox-close" onclick="forceCloseLightbox()">&times;</span>
+        <span class="lightbox-nav lightbox-prev" onclick="prevImage(event)">&#10094;</span>
+        <span class="lightbox-nav lightbox-next" onclick="nextImage(event)">&#10095;</span>
+        <div class="lightbox-content">
+            <img class="lightbox-img" id="lightbox-img" src="" alt="Preview image">
+            <h4 class="lightbox-caption" id="lightbox-caption">Caption</h4>
+        </div>
+    </div>
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-body footer mt-5 pt-5 pb-3 overflow-hidden wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <div class="mb-3 bg-white p-2 rounded d-inline-block">
+                        <img src="img/Queensol%20Energy%20India%20Pvt%20Ltd%20logo%20final%20(1).png" alt="Queensol Energy Logo" style="height: 40px; max-height: 40px;">
+                    </div>
+                    <p class="text-white-50 small mb-4" style="line-height: 1.6;">Our knowledge, experience, and passion to enable solar possibilities has led us to become a trusted, fast-growing solar energy partner.</p>
+                    
+                    <h5 class="text-white mb-3">Corporate Office</h5>
+                    <p class="mb-2 text-white-50" style="font-size: 14px;"><i class="fa fa-map-marker-alt me-3 text-primary"></i>Sector 45, Gurgaon, Haryana - 122003</p>
+                    <h5 class="text-white mt-4 mb-2">Regional Office</h5>
+                    <p class="mb-2 text-white-50" style="font-size: 14px;"><i class="fa fa-map-marker-alt me-3 text-primary"></i>HSR Layout, Sector 2, Bangalore, Karnataka - 560102</p>
+                    <p class="mb-2 text-white-50" style="font-size: 14px;"><i class="fa fa-phone-alt me-3 text-primary"></i>+91 98765 43210</p>
+                    <p class="mb-2 text-white-50" style="font-size: 14px;"><i class="fa fa-envelope me-3 text-primary"></i>info@queensolenergy.in</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square btn-outline-light btn-social" href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
+                        <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="service.html">Our Services</a>
+                    <a class="btn btn-link" href="products.html">Product Range</a>
+                    <a class="btn btn-link" href="careers.html">Careers</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Project Gallery</h5>
+                    <div class="row g-2">
+                        <div class="col-4">
+                            <img class="img-fluid rounded" src="img/gallery-1.jpg" alt="Gallery image 1">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid rounded" src="img/gallery-2.jpg" alt="Gallery image 2">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid rounded" src="img/gallery-3.jpg" alt="Gallery image 3">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid rounded" src="img/gallery-4.jpg" alt="Gallery image 4">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid rounded" src="img/gallery-5.jpg" alt="Gallery image 5">
+                        </div>
+                        <div class="col-4">
+                            <img class="img-fluid rounded" src="img/gallery-6.jpg" alt="Gallery image 6">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-white mb-4">Newsletter</h5>
+                    <p class="text-white-50">Stay updated with the latest solar market insights and Tier-1 stock notifications.</p>
+                    <div class="position-relative mx-auto" style="max-width: 400px;">
+                        <input class="form-control border-0 w-100 py-3 ps-4 pe-5" type="text" placeholder="Your email">
+                        <button type="button" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">SignUp</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="copyright">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0 text-white-50">
+                        &copy; <a href="#">Queensol Energy India Pvt Ltd</a>, All Right Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end text-white-50">
+                        Designed and Developed by <a href="https://dddigitalsolution.com" target="_blank" rel="noopener noreferrer" class="text-white border-bottom">Darshand Digital Solution LLP</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- WhatsApp Floating Button Start -->
+    <a href="https://wa.me/919876543210" target="_blank" rel="noopener noreferrer" class="whatsapp-float wow fadeIn" data-wow-delay="0.5s" title="Chat on WhatsApp">
+        <span class="whatsapp-pulse"></span>
+        <i class="fab fa-whatsapp whatsapp-icon"></i>
+    </a>
+    <!-- WhatsApp Floating Button End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square rounded-circle back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+    <!-- Interactive Gallery Filters & Lightbox JS -->
+    <script>
+        const galleryItems = [
+            { src: 'img/gallery-1.jpg', title: 'Commercial Rooftop Solar', desc: 'A 150kW grid-tied rooftop solar power plant installed for a manufacturing facility in Pune.' },
+            { src: 'img/gallery-2.jpg', title: 'Industrial EPC Project', desc: 'Engineering, procurement, and construction of a solar farm enabling clean power for C&I client.' },
+            { src: 'img/gallery-3.jpg', title: 'Residential Solar PV', desc: 'High-efficiency mono PERC module installation on a residential rooftop for self-consumption.' },
+            { src: 'img/gallery-4.jpg', title: 'Solar Inverter Commissioning', desc: 'Solis commercial string inverters successfully mounted and commissioned with smart monitoring.' },
+            { src: 'img/gallery-5.jpg', title: 'Authorized Warehouse Stock', desc: 'Our stocking hubs keeping ready inventory of premium Tier-1 solar panels and accessories.' },
+            { src: 'img/gallery-6.jpg', title: 'On-Site Technical Survey', desc: 'Detailed site engineering survey and feasibility study conducted by our solar experts.' }
+        ];
+
+        let currentLightboxIndex = 0;
+        const modal = document.getElementById("lightbox-modal");
+        const modalImg = document.getElementById("lightbox-img");
+        const modalCaption = document.getElementById("lightbox-caption");
+
+        // Filter Functionality
+        document.getElementById("gallery-filters").addEventListener("click", (e) => {
+            const btn = e.target.closest("button");
+            if (!btn) return;
+
+            // Remove active classes
+            const btns = document.querySelectorAll(".gallery-filter-btn");
+            btns.forEach(b => {
+                b.className = "btn btn-outline-secondary gallery-filter-btn";
+            });
+
+            // Set active class
+            btn.className = "btn btn-primary gallery-filter-btn";
+
+            const filterValue = btn.getAttribute("data-filter");
+            const items = document.querySelectorAll(".gallery-item");
+
+            items.forEach(item => {
+                const itemCategory = item.getAttribute("data-category");
+                if (filterValue === "All" || itemCategory === filterValue) {
+                    item.style.display = "block";
+                } else {
+                    item.style.display = "none";
+                }
+            });
+        });
+
+        // Lightbox Functions
+        function openLightbox(index) {
+            currentLightboxIndex = index;
+            const item = galleryItems[index];
+            modalImg.src = item.src;
+            modalCaption.innerHTML = `<strong>${item.title}</strong><br><span class="text-white-50 small">${item.desc}</span>`;
+            modal.classList.add("show");
+        }
+
+        function forceCloseLightbox() {
+            modal.classList.remove("show");
+        }
+
+        function closeLightbox(event) {
+            if (event.target === modal) {
+                modal.classList.remove("show");
+            }
+        }
+
+        function prevImage(event) {
+            event.stopPropagation();
+            currentLightboxIndex = (currentLightboxIndex - 1 + galleryItems.length) % galleryItems.length;
+            updateLightboxContent();
+        }
+
+        function nextImage(event) {
+            event.stopPropagation();
+            currentLightboxIndex = (currentLightboxIndex + 1) % galleryItems.length;
+            updateLightboxContent();
+        }
+
+        function updateLightboxContent() {
+            const item = galleryItems[currentLightboxIndex];
+            modalImg.src = item.src;
+            modalCaption.innerHTML = `<strong>${item.title}</strong><br><span class="text-white-50 small">${item.desc}</span>`;
+        }
+
+        // Key Press Listener
+        document.addEventListener("keydown", (e) => {
+            if (!modal.classList.contains("show")) return;
+            if (e.key === "Escape") forceCloseLightbox();
+            if (e.key === "ArrowLeft") prevImage(e);
+            if (e.key === "ArrowRight") nextImage(e);
+        });
+    </script>
+</body>
+
+</html>
