@@ -123,13 +123,9 @@
     <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0">
         <div class="container about px-lg-0">
             <div class="row g-0 mx-lg-0 align-items-center">
-                <div class="col-lg-6 ps-lg-0 wow fadeIn" data-wow-delay="0.1s" style="min-height: 400px;">
-                    <div class="position-relative h-100 rounded-3 overflow-hidden shadow-sm">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/solar-panel.jpg" style="object-fit: cover;" alt="Jinko Solar Panels Overview">
-                        <div class="position-absolute bottom-0 start-0 m-4 bg-white p-3 rounded border-start border-4 border-primary shadow" style="max-width: 260px; z-index: 5;">
-                            <h6 class="text-secondary fw-bold mb-1"><i class="fa fa-solar-panel text-primary me-2"></i>Jinko Solar Authorized</h6>
-                            <span class="text-dark" style="font-size: 13px;">Immediate Pan-India Dispatch</span>
-                        </div>
+                <div class="col-lg-6 ps-lg-0 wow fadeIn" data-wow-delay="0.1s">
+                    <div class="rounded-3 overflow-hidden shadow-sm" style="height: 450px;">
+                        <img class="img-fluid w-100 h-100" src="img/solar-panel.jpg" style="object-fit: cover; display: block;" alt="Jinko Solar Panels Overview">
                     </div>
                 </div>
                 <div class="col-lg-6 about-text py-5 wow fadeIn" data-wow-delay="0.5s">
@@ -340,30 +336,40 @@
             </div>
             <div class="row g-4 justify-content-center">
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="card border-0 shadow-sm rounded-3 p-4 bg-light h-100 d-flex flex-column justify-content-between">
-                        <div>
-                            <span class="badge bg-secondary text-white mb-2">Tiger Neo Series</span>
-                            <h4 class="fw-bold mb-3">Tiger Neo 600Wp N-Type</h4>
-                            <p class="text-secondary small mb-4">High-power 182mm N-Type TOPCon module with industry-leading 22.3% efficiency for utility-scale projects.</p>
+                    <div class="card border-0 shadow-sm rounded-3 overflow-hidden bg-white h-100 d-flex flex-column">
+                        <div class="overflow-hidden" style="height: 220px;">
+                            <img src="img/solar-panel.jpg" alt="Tiger Neo 600Wp N-Type TOPCon" class="img-fluid w-100 h-100" style="object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                         </div>
-                        <div class="border-top pt-3 d-flex flex-wrap gap-2">
-                            <span class="badge bg-primary text-white">600 Wp</span>
-                            <span class="badge bg-primary text-white">N-Type TOPCon</span>
-                            <span class="badge bg-primary text-white">22.3% Efficiency</span>
+                        <div class="p-4 bg-light flex-grow-1 d-flex flex-column justify-content-between">
+                            <div>
+                                <span class="badge bg-secondary text-white mb-2">Tiger Neo Series</span>
+                                <h4 class="fw-bold mb-3">Tiger Neo 600Wp N-Type</h4>
+                                <p class="text-secondary small mb-4">High-power 182mm N-Type TOPCon module with industry-leading 22.3% efficiency for utility-scale projects.</p>
+                            </div>
+                            <div class="border-top pt-3 d-flex flex-wrap gap-2">
+                                <span class="badge bg-primary text-white">600 Wp</span>
+                                <span class="badge bg-primary text-white">N-Type TOPCon</span>
+                                <span class="badge bg-primary text-white">22.3% Efficiency</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="card border-0 shadow-sm rounded-3 p-4 bg-light h-100 d-flex flex-column justify-content-between">
-                        <div>
-                            <span class="badge bg-secondary text-white mb-2">Neo Bifacial</span>
-                            <h4 class="fw-bold mb-3">Tiger Neo 580Wp Bifacial</h4>
-                            <p class="text-secondary small mb-4">Dual-glass bifacial N-type module with up to 30% rear-side energy gain from ground reflection.</p>
+                    <div class="card border-0 shadow-sm rounded-3 overflow-hidden bg-white h-100 d-flex flex-column">
+                        <div class="overflow-hidden" style="height: 220px;">
+                            <img src="img/about.jpg" alt="Tiger Neo 580Wp Bifacial" class="img-fluid w-100 h-100" style="object-fit: cover; transition: transform 0.3s ease;" onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
                         </div>
-                        <div class="border-top pt-3 d-flex flex-wrap gap-2">
-                            <span class="badge bg-primary text-white">580 Wp</span>
-                            <span class="badge bg-primary text-white">Bifacial</span>
-                            <span class="badge bg-primary text-white">Dual Glass</span>
+                        <div class="p-4 bg-light flex-grow-1 d-flex flex-column justify-content-between">
+                            <div>
+                                <span class="badge bg-secondary text-white mb-2">Neo Bifacial</span>
+                                <h4 class="fw-bold mb-3">Tiger Neo 580Wp Bifacial</h4>
+                                <p class="text-secondary small mb-4">Dual-glass bifacial N-type module with up to 30% rear-side energy gain from ground reflection.</p>
+                            </div>
+                            <div class="border-top pt-3 d-flex flex-wrap gap-2">
+                                <span class="badge bg-primary text-white">580 Wp</span>
+                                <span class="badge bg-primary text-white">Bifacial</span>
+                                <span class="badge bg-primary text-white">Dual Glass</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -395,7 +401,9 @@
             <div class="owl-carousel product-carousel position-relative wow fadeInUp" data-wow-delay="0.1s">
                 <!-- Product 1 -->
                 <div class="card border-0 shadow-sm rounded-3 overflow-hidden m-2 h-100">
-                    <img class="img-fluid" src="img/solar-panel.jpg" alt="SWELECT Solar Panel">
+                    <div style="height:200px; overflow:hidden;">
+                        <img class="img-fluid w-100 h-100" src="img/solar-panel.jpg" alt="SWELECT Solar Panel" style="object-fit:cover;">
+                    </div>
                     <div class="p-4">
                         <div class="d-flex justify-content-between align-items-center mb-2">
                             <span class="badge bg-light text-primary border border-primary">Solar Module</span>
@@ -408,7 +416,9 @@
                 </div>
                 <!-- Product 2 -->
                 <div class="card border-0 shadow-sm rounded-3 overflow-hidden m-2 h-100">
-                    <img class="img-fluid" src="img/solar-inverter.jpg" alt="Solis Inverter">
+                    <div style="height:200px; overflow:hidden;">
+                        <img class="img-fluid w-100 h-100" src="img/solar-inverter.jpg" alt="Solis Inverter" style="object-fit:cover;">
+                    </div>
                     <div class="p-4">
                         <div class="d-flex justify-content-between align-items-center mb-2">
                             <span class="badge bg-light text-primary border border-primary">Inverter</span>
@@ -421,7 +431,9 @@
                 </div>
                 <!-- Product 3 -->
                 <div class="card border-0 shadow-sm rounded-3 overflow-hidden m-2 h-100">
-                    <img class="img-fluid" src="img/battery-storage.jpg" alt="Jinko Solar Panel">
+                    <div style="height:200px; overflow:hidden;">
+                        <img class="img-fluid w-100 h-100" src="img/solar-panel.jpg" alt="Jinko Solar Panel" style="object-fit:cover;">
+                    </div>
                     <div class="p-4">
                         <div class="d-flex justify-content-between align-items-center mb-2">
                             <span class="badge bg-light text-primary border border-primary">Solar Module</span>
@@ -432,129 +444,623 @@
                         <a href="jinko.html" class="btn btn-link text-primary p-0 fw-bold">Explore Product <i class="fa fa-arrow-right ms-1"></i></a>
                     </div>
                 </div>
+                <!-- Product 4 -->
+                <div class="card border-0 shadow-sm rounded-3 overflow-hidden m-2 h-100">
+                    <div style="height:200px; overflow:hidden;">
+                        <img class="img-fluid w-100 h-100" src="img/about.jpg" alt="JA Solar Panel" style="object-fit:cover;">
+                    </div>
+                    <div class="p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-light text-primary border border-primary">Solar Module</span>
+                            <small class="text-muted fw-bold">JA SOLAR</small>
+                        </div>
+                        <h5 class="fw-bold mb-2">JA DeepBlue 3.0</h5>
+                        <p class="text-secondary small mb-3">Multi-busbar mono PERC modules with superior shading tolerance and 21.5% efficiency.</p>
+                        <a href="ja-solar.html" class="btn btn-link text-primary p-0 fw-bold">Explore Product <i class="fa fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+                <!-- Product 5 -->
+                <div class="card border-0 shadow-sm rounded-3 overflow-hidden m-2 h-100">
+                    <div style="height:200px; overflow:hidden;">
+                        <img class="img-fluid w-100 h-100" src="img/battery-storage.jpg" alt="Sungrow Hybrid Inverter" style="object-fit:cover;">
+                    </div>
+                    <div class="p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-light text-primary border border-primary">Energy Storage</span>
+                            <small class="text-muted fw-bold">SUNGROW</small>
+                        </div>
+                        <h5 class="fw-bold mb-2">Sungrow Hybrid SH Series</h5>
+                        <p class="text-secondary small mb-3">Hybrid storage inverter for solar + battery backup with seamless switchover.</p>
+                        <a href="sungrow.html" class="btn btn-link text-primary p-0 fw-bold">Explore Product <i class="fa fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <!-- Featured Solar Products Slider End -->
 
-    <!-- Free Consultation Form Section Start -->
-    <div class="container-fluid bg-light overflow-hidden my-5 px-lg-0" id="consultation">
-        <div class="container quote px-lg-0">
-            <div class="row g-0 mx-lg-0">
-                <div class="col-lg-6 quote-text py-5 wow fadeIn" data-wow-delay="0.1s" style="background-color: var(--dark, #1A2A36);">
-                    <div class="p-lg-5 pe-lg-0 text-white">
-                        <h6 class="text-primary text-uppercase fw-bold mb-2">Free Consultation</h6>
-                        <h1 class="text-white mb-4">Request a Custom Quotation</h1>
-                        <p class="text-white-50 mb-4">Fill out the form below to receive immediate pricing, stock availability, and technical consulting from Queensol Energy specialists.</p>
-                        <form class="quote-form-fields-container mt-2" onsubmit="event.preventDefault(); alert('Quote request submitted successfully! Our team will contact you shortly.');">
-                            <div class="quote-form-row">
-                                <input type="text" name="name" required placeholder="Name *" class="quote-input-field">
-                                <input type="text" name="phone" required placeholder="Contact Number *" class="quote-input-field">
+    <!-- Request A Quote Section Start -->
+    <div class="container-xxl py-5 my-5" id="queensolQuoteForm">
+        <div class="container">
+            <div class="quote-form-grid wow fadeInUp" data-wow-delay="0.1s">
+                <div class="quote-form-content">
+                    <div class="quote-form-header text-center">
+                        <h6 class="text-primary text-uppercase fw-bold mb-2">Request A Quote</h6>
+                        <h1 class="mb-3 text-dark fw-bold" style="font-size: 32px;">Request Pricing & Engineering Support</h1>
+                        <p class="text-muted mx-auto" style="max-width: 650px; font-size: 14px;">
+                            Complete control over products allows us to ensure our customers receive the best quality, prices and service. Submit your requirements and our team will get back to you shortly.
+                        </p>
+                    </div>
+
+                    <form class="quote-form-fields-container mt-4">
+                        <!-- Name & Phone -->
+                        <div class="quote-form-row">
+                            <input type="text" name="name" required placeholder="Name *" class="quote-input-field">
+                            <input type="text" name="phone" required placeholder="Contact Number *" class="quote-input-field">
+                        </div>
+
+                        <!-- Email & Company -->
+                        <div class="quote-form-row mt-3">
+                            <input type="email" name="email" required placeholder="Email *" class="quote-input-field">
+                            <input type="text" name="company" placeholder="Company Name" class="quote-input-field">
+                        </div>
+
+                        <!-- Message -->
+                        <div class="mt-3">
+                            <textarea name="message" required placeholder="Message *" rows="4" class="quote-input-field quote-textarea-field"></textarea>
+                        </div>
+
+                        <!-- Contact Info Strip -->
+                        <div class="quote-contact-info-strip mt-4">
+                            <div class="quote-contact-info-item">
+                                <span class="quote-contact-info-label">Call Us</span>
+                                <span class="quote-contact-info-val"><a href="tel:+919876543210">+91 98765 43210</a></span>
                             </div>
-                            <div class="quote-form-row mt-3">
-                                <input type="email" name="email" required placeholder="Email *" class="quote-input-field">
-                                <input type="text" name="company" placeholder="Company Name" class="quote-input-field">
+                            <div class="quote-contact-info-item">
+                                <span class="quote-contact-info-label">Office Time</span>
+                                <span class="quote-contact-info-val">Monday - Saturday (09:30 AM - 06:00 PM)</span>
                             </div>
-                            <div class="mt-3">
-                                <textarea name="message" required placeholder="Message / Project Requirements *" rows="3" class="quote-input-field quote-textarea-field"></textarea>
+                            <div class="quote-contact-info-item">
+                                <span class="quote-contact-info-label">Quick Contact</span>
+                                <span class="quote-contact-info-val">Email: <a href="mailto:info@queensolenergy.in">info@queensolenergy.in</a></span>
                             </div>
-                            <div class="quote-contact-info-strip mt-4">
-                                <div class="quote-contact-info-item">
-                                    <span class="quote-contact-info-label">Call Us</span>
-                                    <span class="quote-contact-info-val"><a href="tel:+919876543210">+91 98765 43210</a></span>
-                                </div>
-                                <div class="quote-contact-info-item">
-                                    <span class="quote-contact-info-label">Office Time</span>
-                                    <span class="quote-contact-info-val">Monday - Saturday (09:30 AM - 06:00 PM)</span>
-                                </div>
-                                <div class="quote-contact-info-item">
-                                    <span class="quote-contact-info-label">Quick Contact</span>
-                                    <span class="quote-contact-info-val">Email: <a href="mailto:info@queensolenergy.in">info@queensolenergy.in</a></span>
-                                </div>
+                        </div>
+
+                        <!-- Dropdown Select Grids -->
+                        <div class="quote-form-row mt-4">
+                            <div class="quote-choice-group">
+                                <span class="quote-checkbox-group-title">Select Product *</span>
+                                <select name="product" required class="quote-input-field">
+                                    <option value="" disabled selected>Select Product *</option>
+                                    <option value="Solar Panel">Solar Panel</option>
+                                    <option value="Solar Inverter">Solar Inverter</option>
+                                    <option value="BOS Accessories">BOS Accessories</option>
+                                </select>
                             </div>
-                            <div class="quote-form-row mt-4">
-                                <div class="quote-choice-group">
-                                    <span class="quote-checkbox-group-title">Select Product *</span>
-                                    <select name="product" required class="quote-input-field">
-                                        <option value="" disabled selected>Select Product *</option>
-                                        <option value="Tiger Neo 600Wp N-Type">Tiger Neo 600Wp N-Type</option>
-                                        <option value="Tiger Neo 580Wp Bifacial">Tiger Neo 580Wp Bifacial</option>
-                                    </select>
-                                </div>
-                                <div class="quote-choice-group">
-                                    <span class="quote-checkbox-group-title">Support Needed *</span>
-                                    <select name="support" required class="quote-input-field">
-                                        <option value="" disabled selected>Select Support Type *</option>
-                                        <option value="Technical Support">Technical Support</option>
-                                        <option value="Price Quotation">Price Quotation</option>
-                                        <option value="After Sales Service Support">After Sales Service Support</option>
-                                    </select>
-                                </div>
+                            <div class="quote-choice-group">
+                                <span class="quote-checkbox-group-title">Support Needed *</span>
+                                <select name="support" required class="quote-input-field">
+                                    <option value="" disabled selected>Select Support Type *</option>
+                                    <option value="Technical Support">Technical Support</option>
+                                    <option value="Price Quotation">Price Quotation</option>
+                                    <option value="After Sales Service Support">After Sales Service Support</option>
+                                </select>
                             </div>
-                            <div class="quote-form-row mt-3">
-                                <div class="quote-choice-group">
-                                    <span class="quote-checkbox-group-title">Preferred Stock Location *</span>
-                                    <select name="location" required class="quote-input-field">
-                                        <option value="" disabled selected>Select Location *</option>
-                                        <option value="Karad">Karad Warehouse</option>
-                                        <option value="Pune">Pune Warehouse</option>
-                                        <option value="Muktainagar">Muktainagar Warehouse</option>
-                                    </select>
-                                </div>
-                                <div class="quote-choice-group">
-                                    <span class="quote-checkbox-group-title">Select Nearest Warehouse *</span>
-                                    <select name="warehouse" required class="quote-input-field">
-                                        <option value="" disabled selected>Select Warehouse *</option>
-                                        <option value="Karad">Karad (Western India)</option>
-                                        <option value="Pune">Pune (Central/West India)</option>
-                                        <option value="Muktainagar">Muktainagar (North/West India)</option>
-                                    </select>
-                                </div>
+                        </div>
+
+                        <div class="quote-form-row mt-3">
+                            <div class="quote-choice-group">
+                                <span class="quote-checkbox-group-title">Preferred Stock Location *</span>
+                                <select name="location" required class="quote-input-field">
+                                    <option value="" disabled selected>Select Location *</option>
+                                    <option value="Karad">Karad Warehouse</option>
+                                    <option value="Pune">Pune Warehouse</option>
+                                    <option value="Muktainagar">Muktainagar Warehouse</option>
+                                </select>
                             </div>
-                            <div class="mt-4">
-                                <div class="quote-recaptcha-widget">
-                                    <div class="quote-recaptcha-left-side">
-                                        <input type="checkbox" required class="quote-recaptcha-checkbox-box">
-                                        <span class="quote-recaptcha-text-label">I'm not a robot</span>
-                                    </div>
-                                    <div class="quote-recaptcha-right-side">
-                                        <svg style="width: 28px; height: 28px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
-                                            <path d="M22 12C22 9.24 20.88 6.74 19.07 4.93L16.24 7.76C17.33 8.85 18 10.35 18 12C18 15.31 15.31 18 12 18C10.35 18 8.85 17.33 7.76 16.24L4.93 19.07C6.74 20.88 9.24 22 12 22C17.52 22 22 17.52 22 12Z" fill="#2563EB" opacity="0.15"/>
-                                            <path d="M12 6V12L16 14" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                        </svg>
-                                        <span style="font-size: 8px; color: #4B5563; font-weight: 600; margin-top: 2px;">reCAPTCHA</span>
-                                        <div class="quote-recaptcha-brand-links-block" style="font-size: 8px; display: flex; gap: 4px; margin-top: 2px;">
-                                            <a href="https://www.google.com/intl/en/policies/privacy/" target="_blank" style="text-decoration: none; color: #555555;">Privacy</a>
-                                            <span>-</span>
-                                            <a href="https://www.google.com/intl/en/policies/terms/" target="_blank" style="text-decoration: none; color: #555555;">Terms</a>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div class="quote-choice-group">
+                                <span class="quote-checkbox-group-title">Select Nearest Warehouse *</span>
+                                <select name="warehouse" required class="quote-input-field">
+                                    <option value="" disabled selected>Select Warehouse *</option>
+                                    <option value="Karad">Karad (Western India)</option>
+                                    <option value="Pune">Pune (Central/West India)</option>
+                                    <option value="Muktainagar">Muktainagar (North/West India)</option>
+                                </select>
                             </div>
-                            <div class="mt-4 text-center">
-                                <button type="submit" class="quote-submit-btn-element">
-                                    Submit Request
-                                    <svg style="width: 16px; height: 16px; margin-left: 6px;" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
+                        </div>
+
+                        <!-- reCAPTCHA mock widget -->
+                        <div class="mt-4">
+                            <div class="quote-recaptcha-widget">
+                                <div class="quote-recaptcha-left-side">
+                                    <input type="checkbox" required class="quote-recaptcha-checkbox-box">
+                                    <span class="quote-recaptcha-text-label">I'm not a robot</span>
+                                </div>
+                                <div class="quote-recaptcha-right-side">
+                                    <svg style="width: 28px; height: 28px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+                                        <path d="M22 12C22 9.24 20.88 6.74 19.07 4.93L16.24 7.76C17.33 8.85 18 10.35 18 12C18 15.31 15.31 18 12 18C10.35 18 8.85 17.33 7.76 16.24L4.93 19.07C6.74 20.88 9.24 22 12 22C17.52 22 22 17.52 22 12Z" fill="#2563EB" opacity="0.15"/>
+                                        <path d="M12 6V12L16 14" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                                     </svg>
-                                </button>
+                                    <span style="font-size: 8px; color: #4B5563; font-weight: 600; margin-top: 2px;">reCAPTCHA</span>
+                                    <div class="quote-recaptcha-brand-links-block">
+                                        <a href="https://www.google.com/intl/en/policies/privacy/" target="_blank" style="text-decoration: none; color: #555555;">Privacy</a>
+                                        <span>-</span>
+                                        <a href="https://www.google.com/intl/en/policies/terms/" target="_blank" style="text-decoration: none; color: #555555;">Terms</a>
+                                    </div>
+                                </div>
                             </div>
-                        </form>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <div class="quote-submit-button-container mt-4">
+                            <button type="submit" class="btn btn-primary rounded-pill py-3 px-5 fw-bold">
+                                Submit Request <i class="fa fa-arrow-right ms-2"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Request A Quote Section End -->
+
+    
+<!-- Featured Products Slider Start -->
+    <div class="container-xxl py-5 bg-light overflow-hidden">
+        <div class="container mb-5">
+            <div class="text-center mx-auto mb-4 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 700px;">
+                <h6 class="text-primary text-uppercase fw-bold mb-2">Featured Products</h6>
+                <h1 class="mb-2" style="font-size: 32px; font-weight: 700;">Premium Solar Components Catalogue</h1>
+                <p class="mb-3 text-muted">Browse authorized solar panels, inverters, and accessories from Tier-1 brands with pan-India delivery, engineering support and genuine warranty.</p>
+                <a href="products.html" class="btn btn-primary rounded-pill py-3 px-4 mt-2">View All Products <i class="fa fa-arrow-right ms-1"></i></a>
+            </div>
+        </div>
+        
+        <!-- Continuous Product Slider -->
+        <div class="product-marquee-container wow fadeIn" data-wow-delay="0.1s">
+            <div class="product-marquee-track">
+                <!-- First Set -->
+                <div class="product-marquee-slide">
+                    <!-- Product 1 -->
+                    <div class="product-slider-card">
+                        <div class="product-card position-relative">
+                            <span class="product-badge">Hybrid Inverter</span>
+                            <div style="aspect-ratio: 4/3; overflow: hidden; background: #e9ecef;">
+                                <img src="img/solar-inverter.jpg" alt="Solis Energy Storage Inverter" class="img-fluid w-100 h-100" style="object-fit: cover;">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column">
+                                <h4 class="mb-1 text-dark fw-bold" style="font-size: 17px;">Solis Energy Storage Inverter</h4>
+                                <p class="text-muted small mb-3">Model: RHI Series (Solis)</p>
+                                <p class="mb-3 text-muted" style="font-size: 13px; line-height: 1.4;">Hybrid energy storage inverter for residential and small commercial solar+battery systems.</p>
+                                <div class="product-specs mb-3 text-dark font-monospace" style="font-size: 11px;">
+                                    3-6 kW · Dual MPPT · IP65 · Wi-Fi
+                                </div>
+                                <div class="row g-2 mt-auto pt-2 border-top">
+                                    <div class="col-6">
+                                        <a href="products.html?brand=solis" class="btn btn-sm btn-outline-secondary w-100" style="font-size: 11px; font-weight: 600;">More Info</a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="contact.html" class="btn btn-sm btn-primary w-100" style="font-size: 11px; font-weight: 600;">Request Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="product-slider-card">
+                        <div class="product-card position-relative">
+                            <span class="product-badge">C&I Inverter</span>
+                            <div style="aspect-ratio: 4/3; overflow: hidden; background: #e9ecef;">
+                                <img src="img/solar-inverter.jpg" alt="100-110kW Three Phase Inverter" class="img-fluid w-100 h-100" style="object-fit: cover;">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column">
+                                <h4 class="mb-1 text-dark fw-bold" style="font-size: 17px;">100-110kW Three Phase Inverter</h4>
+                                <p class="text-muted small mb-3">Model: S5-GC110K (Solis)</p>
+                                <p class="mb-3 text-muted" style="font-size: 13px; line-height: 1.4;">High-efficiency commercial three-phase string inverter for rooftop and ground-mount.</p>
+                                <div class="product-specs mb-3 text-dark font-monospace" style="font-size: 11px;">
+                                    100-110 kW · 10 MPPTs · 98.7% Eff.
+                                </div>
+                                <div class="row g-2 mt-auto pt-2 border-top">
+                                    <div class="col-6">
+                                        <a href="products.html?brand=solis" class="btn btn-sm btn-outline-secondary w-100" style="font-size: 11px; font-weight: 600;">More Info</a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="contact.html" class="btn btn-sm btn-primary w-100" style="font-size: 11px; font-weight: 600;">Request Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="product-slider-card">
+                        <div class="product-card position-relative">
+                            <span class="product-badge">Mono PERC Module</span>
+                            <div style="aspect-ratio: 4/3; overflow: hidden; background: #e9ecef;">
+                                <img src="img/solar-panel.jpg" alt="Mono PERC Solar Module" class="img-fluid w-100 h-100" style="object-fit: cover;">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column">
+                                <h4 class="mb-1 text-dark fw-bold" style="font-size: 17px;">Mono PERC Solar Module</h4>
+                                <p class="text-muted small mb-3">Model: SW Series (SWELECT)</p>
+                                <p class="mb-3 text-muted" style="font-size: 13px; line-height: 1.4;">Reliable mono PERC modules engineered for Indian climatic conditions.</p>
+                                <div class="product-specs mb-3 text-dark font-monospace" style="font-size: 11px;">
+                                    540-550 Wp · 21.4% Eff. · 25-yr warranty
+                                </div>
+                                <div class="row g-2 mt-auto pt-2 border-top">
+                                    <div class="col-6">
+                                        <a href="products.html?brand=swelect" class="btn btn-sm btn-outline-secondary w-100" style="font-size: 11px; font-weight: 600;">More Info</a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="contact.html" class="btn btn-sm btn-primary w-100" style="font-size: 11px; font-weight: 600;">Request Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 4 -->
+                    <div class="product-slider-card">
+                        <div class="product-card position-relative">
+                            <span class="product-badge">Bifacial Module</span>
+                            <div style="aspect-ratio: 4/3; overflow: hidden; background: #e9ecef;">
+                                <img src="img/solar-panel.jpg" alt="Bifacial Mono PERC Module" class="img-fluid w-100 h-100" style="object-fit: cover;">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column">
+                                <h4 class="mb-1 text-dark fw-bold" style="font-size: 17px;">Bifacial Mono PERC Module</h4>
+                                <p class="text-muted small mb-3">Model: Somera Grand Ultima (Vikram)</p>
+                                <p class="mb-3 text-muted" style="font-size: 13px; line-height: 1.4;">Dual-glass bifacial modules with up to 25% backside power gain.</p>
+                                <div class="product-specs mb-3 text-dark font-monospace" style="font-size: 11px;">
+                                    545-555 Wp · Bifacial · 30-yr warranty
+                                </div>
+                                <div class="row g-2 mt-auto pt-2 border-top">
+                                    <div class="col-6">
+                                        <a href="products.html?brand=vikram" class="btn btn-sm btn-outline-secondary w-100" style="font-size: 11px; font-weight: 600;">More Info</a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="contact.html" class="btn btn-sm btn-primary w-100" style="font-size: 11px; font-weight: 600;">Request Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 5 -->
+                    <div class="product-slider-card">
+                        <div class="product-card position-relative">
+                            <span class="product-badge">N-Type TOPCon</span>
+                            <div style="aspect-ratio: 4/3; overflow: hidden; background: #e9ecef;">
+                                <img src="img/solar-panel.jpg" alt="N-Type TOPCon Solar Module" class="img-fluid w-100 h-100" style="object-fit: cover;">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column">
+                                <h4 class="mb-1 text-dark fw-bold" style="font-size: 17px;">N-Type TOPCon Solar Module</h4>
+                                <p class="text-muted small mb-3">Model: Tiger Neo (Jinko Solar)</p>
+                                <p class="mb-3 text-muted" style="font-size: 13px; line-height: 1.4;">Next-gen N-Type TOPCon modules with ultra-low degradation and high yields.</p>
+                                <div class="product-specs mb-3 text-dark font-monospace" style="font-size: 11px;">
+                                    575-620 Wp · 22.3% Eff. · 0.4% Ann. Deg.
+                                </div>
+                                <div class="row g-2 mt-auto pt-2 border-top">
+                                    <div class="col-6">
+                                        <a href="products.html?brand=jinko" class="btn btn-sm btn-outline-secondary w-100" style="font-size: 11px; font-weight: 600;">More Info</a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="contact.html" class="btn btn-sm btn-primary w-100" style="font-size: 11px; font-weight: 600;">Request Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 6 -->
+                    <div class="product-slider-card">
+                        <div class="product-card position-relative">
+                            <span class="product-badge">System Accessories</span>
+                            <div style="aspect-ratio: 4/3; overflow: hidden; background: #e9ecef;">
+                                <img src="img/battery-storage.jpg" alt="Balance of System Accessories" class="img-fluid w-100 h-100" style="object-fit: cover;">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column">
+                                <h4 class="mb-1 text-dark fw-bold" style="font-size: 17px;">Balance of System Accessories</h4>
+                                <p class="text-muted small mb-3">Model: BOS Kit (Queensol)</p>
+                                <p class="mb-3 text-muted" style="font-size: 13px; line-height: 1.4;">Mounting structures, AJBs, DC/AC cables, MC4 connectors and monitoring.</p>
+                                <div class="product-specs mb-3 text-dark font-monospace" style="font-size: 11px;">
+                                    Galvanized Steel · TUV Cert · IP67
+                                </div>
+                                <div class="row g-2 mt-auto pt-2 border-top">
+                                    <div class="col-6">
+                                        <a href="products.html?brand=bos" class="btn btn-sm btn-outline-secondary w-100" style="font-size: 11px; font-weight: 600;">More Info</a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="contact.html" class="btn btn-sm btn-primary w-100" style="font-size: 11px; font-weight: 600;">Request Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6 ps-lg-0 wow fadeIn" data-wow-delay="0.5s" style="min-height: 400px;">
-                    <div class="position-relative h-100">
-                        <img class="position-absolute img-fluid w-100 h-100" src="img/quote.jpg" style="object-fit: cover;" alt="Queensol Warehouse Infrastructure">
+                <!-- Second Set (Duplicate) -->
+                <div class="product-marquee-slide">
+                    <!-- Product 1 -->
+                    <div class="product-slider-card">
+                        <div class="product-card position-relative">
+                            <span class="product-badge">Hybrid Inverter</span>
+                            <div style="aspect-ratio: 4/3; overflow: hidden; background: #e9ecef;">
+                                <img src="img/solar-inverter.jpg" alt="Solis Energy Storage Inverter" class="img-fluid w-100 h-100" style="object-fit: cover;">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column">
+                                <h4 class="mb-1 text-dark fw-bold" style="font-size: 17px;">Solis Energy Storage Inverter</h4>
+                                <p class="text-muted small mb-3">Model: RHI Series (Solis)</p>
+                                <p class="mb-3 text-muted" style="font-size: 13px; line-height: 1.4;">Hybrid energy storage inverter for residential and small commercial solar+battery systems.</p>
+                                <div class="product-specs mb-3 text-dark font-monospace" style="font-size: 11px;">
+                                    3-6 kW · Dual MPPT · IP65 · Wi-Fi
+                                </div>
+                                <div class="row g-2 mt-auto pt-2 border-top">
+                                    <div class="col-6">
+                                        <a href="products.html?brand=solis" class="btn btn-sm btn-outline-secondary w-100" style="font-size: 11px; font-weight: 600;">More Info</a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="contact.html" class="btn btn-sm btn-primary w-100" style="font-size: 11px; font-weight: 600;">Request Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 2 -->
+                    <div class="product-slider-card">
+                        <div class="product-card position-relative">
+                            <span class="product-badge">C&I Inverter</span>
+                            <div style="aspect-ratio: 4/3; overflow: hidden; background: #e9ecef;">
+                                <img src="img/solar-inverter.jpg" alt="100-110kW Three Phase Inverter" class="img-fluid w-100 h-100" style="object-fit: cover;">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column">
+                                <h4 class="mb-1 text-dark fw-bold" style="font-size: 17px;">100-110kW Three Phase Inverter</h4>
+                                <p class="text-muted small mb-3">Model: S5-GC110K (Solis)</p>
+                                <p class="mb-3 text-muted" style="font-size: 13px; line-height: 1.4;">High-efficiency commercial three-phase string inverter for rooftop and ground-mount.</p>
+                                <div class="product-specs mb-3 text-dark font-monospace" style="font-size: 11px;">
+                                    100-110 kW · 10 MPPTs · 98.7% Eff.
+                                </div>
+                                <div class="row g-2 mt-auto pt-2 border-top">
+                                    <div class="col-6">
+                                        <a href="products.html?brand=solis" class="btn btn-sm btn-outline-secondary w-100" style="font-size: 11px; font-weight: 600;">More Info</a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="contact.html" class="btn btn-sm btn-primary w-100" style="font-size: 11px; font-weight: 600;">Request Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 3 -->
+                    <div class="product-slider-card">
+                        <div class="product-card position-relative">
+                            <span class="product-badge">Mono PERC Module</span>
+                            <div style="aspect-ratio: 4/3; overflow: hidden; background: #e9ecef;">
+                                <img src="img/solar-panel.jpg" alt="Mono PERC Solar Module" class="img-fluid w-100 h-100" style="object-fit: cover;">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column">
+                                <h4 class="mb-1 text-dark fw-bold" style="font-size: 17px;">Mono PERC Solar Module</h4>
+                                <p class="text-muted small mb-3">Model: SW Series (SWELECT)</p>
+                                <p class="mb-3 text-muted" style="font-size: 13px; line-height: 1.4;">Reliable mono PERC modules engineered for Indian climatic conditions.</p>
+                                <div class="product-specs mb-3 text-dark font-monospace" style="font-size: 11px;">
+                                    540-550 Wp · 21.4% Eff. · 25-yr warranty
+                                </div>
+                                <div class="row g-2 mt-auto pt-2 border-top">
+                                    <div class="col-6">
+                                        <a href="products.html?brand=swelect" class="btn btn-sm btn-outline-secondary w-100" style="font-size: 11px; font-weight: 600;">More Info</a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="contact.html" class="btn btn-sm btn-primary w-100" style="font-size: 11px; font-weight: 600;">Request Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 4 -->
+                    <div class="product-slider-card">
+                        <div class="product-card position-relative">
+                            <span class="product-badge">Bifacial Module</span>
+                            <div style="aspect-ratio: 4/3; overflow: hidden; background: #e9ecef;">
+                                <img src="img/solar-panel.jpg" alt="Bifacial Mono PERC Module" class="img-fluid w-100 h-100" style="object-fit: cover;">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column">
+                                <h4 class="mb-1 text-dark fw-bold" style="font-size: 17px;">Bifacial Mono PERC Module</h4>
+                                <p class="text-muted small mb-3">Model: Somera Grand Ultima (Vikram)</p>
+                                <p class="mb-3 text-muted" style="font-size: 13px; line-height: 1.4;">Dual-glass bifacial modules with up to 25% backside power gain.</p>
+                                <div class="product-specs mb-3 text-dark font-monospace" style="font-size: 11px;">
+                                    545-555 Wp · Bifacial · 30-yr warranty
+                                </div>
+                                <div class="row g-2 mt-auto pt-2 border-top">
+                                    <div class="col-6">
+                                        <a href="products.html?brand=vikram" class="btn btn-sm btn-outline-secondary w-100" style="font-size: 11px; font-weight: 600;">More Info</a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="contact.html" class="btn btn-sm btn-primary w-100" style="font-size: 11px; font-weight: 600;">Request Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 5 -->
+                    <div class="product-slider-card">
+                        <div class="product-card position-relative">
+                            <span class="product-badge">N-Type TOPCon</span>
+                            <div style="aspect-ratio: 4/3; overflow: hidden; background: #e9ecef;">
+                                <img src="img/solar-panel.jpg" alt="N-Type TOPCon Solar Module" class="img-fluid w-100 h-100" style="object-fit: cover;">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column">
+                                <h4 class="mb-1 text-dark fw-bold" style="font-size: 17px;">N-Type TOPCon Solar Module</h4>
+                                <p class="text-muted small mb-3">Model: Tiger Neo (Jinko Solar)</p>
+                                <p class="mb-3 text-muted" style="font-size: 13px; line-height: 1.4;">Next-gen N-Type TOPCon modules with ultra-low degradation and high yields.</p>
+                                <div class="product-specs mb-3 text-dark font-monospace" style="font-size: 11px;">
+                                    575-620 Wp · 22.3% Eff. · 0.4% Ann. Deg.
+                                </div>
+                                <div class="row g-2 mt-auto pt-2 border-top">
+                                    <div class="col-6">
+                                        <a href="products.html?brand=jinko" class="btn btn-sm btn-outline-secondary w-100" style="font-size: 11px; font-weight: 600;">More Info</a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="contact.html" class="btn btn-sm btn-primary w-100" style="font-size: 11px; font-weight: 600;">Request Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product 6 -->
+                    <div class="product-slider-card">
+                        <div class="product-card position-relative">
+                            <span class="product-badge">System Accessories</span>
+                            <div style="aspect-ratio: 4/3; overflow: hidden; background: #e9ecef;">
+                                <img src="img/battery-storage.jpg" alt="Balance of System Accessories" class="img-fluid w-100 h-100" style="object-fit: cover;">
+                            </div>
+                            <div class="p-4 flex-grow-1 d-flex flex-column">
+                                <h4 class="mb-1 text-dark fw-bold" style="font-size: 17px;">Balance of System Accessories</h4>
+                                <p class="text-muted small mb-3">Model: BOS Kit (Queensol)</p>
+                                <p class="mb-3 text-muted" style="font-size: 13px; line-height: 1.4;">Mounting structures, AJBs, DC/AC cables, MC4 connectors and monitoring.</p>
+                                <div class="product-specs mb-3 text-dark font-monospace" style="font-size: 11px;">
+                                    Galvanized Steel · TUV Cert · IP67
+                                </div>
+                                <div class="row g-2 mt-auto pt-2 border-top">
+                                    <div class="col-6">
+                                        <a href="products.html?brand=bos" class="btn btn-sm btn-outline-secondary w-100" style="font-size: 11px; font-weight: 600;">More Info</a>
+                                    </div>
+                                    <div class="col-6">
+                                        <a href="contact.html" class="btn btn-sm btn-primary w-100" style="font-size: 11px; font-weight: 600;">Request Quote</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Free Consultation Form Section End -->
+    <!-- Featured Products Slider End -->
 
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-body footer mt-5 pt-5 pb-3 overflow-hidden wow fadeIn" data-wow-delay="0.1s">
+<!-- Quote / Contact Section Start -->
+    <div class="container-xxl py-5" style="margin-top: 5rem;">
+        <div class="container">
+            <div class="quote-form-grid wow fadeInUp" data-wow-delay="0.1s">
+                <div class="quote-form-content">
+                    <div class="quote-form-header text-center">
+                        <h6 class="text-primary text-uppercase fw-bold mb-2">Request A Quote</h6>
+                        <h1 class="mb-3 text-dark fw-bold" style="font-size: 32px;">Request Pricing & Engineering Support</h1>
+                        <p class="text-muted mx-auto" style="max-width: 650px; font-size: 14px;">
+                            Complete control over products allows us to ensure our customers receive the best quality, prices and service. Submit your requirements and our team will get back to you shortly.
+                        </p>
+                    </div>
+                    
+                    <form class="quote-form-fields-container mt-4" id="queensolQuoteForm">
+                        <!-- Name & Phone -->
+                        <div class="quote-form-row">
+                            <input type="text" name="name" required placeholder="Name *" class="quote-input-field">
+                            <input type="text" name="phone" required placeholder="Contact Number *" class="quote-input-field">
+                        </div>
+                        
+                        <!-- Email & Company -->
+                        <div class="quote-form-row mt-3">
+                            <input type="email" name="email" required placeholder="Email *" class="quote-input-field">
+                            <input type="text" name="company" placeholder="Company Name" class="quote-input-field">
+                        </div>
+                        
+                        <!-- Message -->
+                        <div class="mt-3">
+                            <textarea name="message" required placeholder="Message *" rows="4" class="quote-input-field quote-textarea-field"></textarea>
+                        </div>
+                        
+                        <!-- Contact Info Strip (Lighter grey panel) -->
+                        <div class="quote-contact-info-strip mt-4">
+                            <div class="quote-contact-info-item">
+                                <span class="quote-contact-info-label">Call Us</span>
+                                <span class="quote-contact-info-val"><a href="tel:+919876543210">+91 98765 43210</a></span>
+                            </div>
+                            <div class="quote-contact-info-item">
+                                <span class="quote-contact-info-label">Office Time</span>
+                                <span class="quote-contact-info-val">Monday - Saturday (09:30 AM - 06:00 PM)</span>
+                            </div>
+                            <div class="quote-contact-info-item">
+                                <span class="quote-contact-info-label">Quick Contact</span>
+                                <span class="quote-contact-info-val">Email: <a href="mailto:info@queensolenergy.in">info@queensolenergy.in</a></span>
+                            </div>
+                        </div>
+                        
+                        <!-- Dropdown Select Grids -->
+                        <div class="quote-form-row mt-4">
+                            <div class="quote-choice-group">
+                                <span class="quote-checkbox-group-title">Select Product *</span>
+                                <select name="product" required class="quote-input-field">
+                                    <option value="" disabled selected>Select Product *</option>
+                                    <option value="Solar Panel">Solar Panel</option>
+                                    <option value="Solar Inverter">Solar Inverter</option>
+                                    <option value="BOS Accessories">BOS Accessories</option>
+                                </select>
+                            </div>
+                            
+                            <div class="quote-choice-group">
+                                <span class="quote-checkbox-group-title">Support Needed *</span>
+                                <select name="support" required class="quote-input-field">
+                                    <option value="" disabled selected>Select Support Type *</option>
+                                    <option value="Technical Support">Technical Support</option>
+                                    <option value="Price Quotation">Price Quotation</option>
+                                    <option value="After Sales Service Support">After Sales Service Support</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="quote-form-row mt-3">
+                            <div class="quote-choice-group">
+                                <span class="quote-checkbox-group-title">Preferred Stock Location *</span>
+                                <select name="location" required class="quote-input-field">
+                                    <option value="" disabled selected>Select Location *</option>
+                                    <option value="Karad">Karad Warehouse</option>
+                                    <option value="Pune">Pune Warehouse</option>
+                                    <option value="Muktainagar">Muktainagar Warehouse</option>
+                                </select>
+                            </div>
+                            
+                            <div class="quote-choice-group">
+                                <span class="quote-checkbox-group-title">Select Nearest Warehouse *</span>
+                                <select name="warehouse" required class="quote-input-field">
+                                    <option value="" disabled selected>Select Warehouse *</option>
+                                    <option value="Karad">Karad (Western India)</option>
+                                    <option value="Pune">Pune (Central/West India)</option>
+                                    <option value="Muktainagar">Muktainagar (North/West India)</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <!-- Google reCAPTCHA mock widget -->
+                        <div class="mt-4">
+                            <div class="quote-recaptcha-widget">
+                                <div class="quote-recaptcha-left-side">
+                                    <input type="checkbox" required class="quote-recaptcha-checkbox-box">
+                                    <span class="quote-recaptcha-text-label">I'm not a robot</span>
+                                </div>
+                                <div class="quote-recaptcha-right-side">
+                                    <svg style="width: 28px; height: 28px;" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+                                        <path d="M22 12C22 9.24 20.88 6.74 19.07 4.93L16.24 7.76C17.33 8.85 18 10.35 18 12C18 15.31 15.31 18 12 18C10.35 18 8.85 17.33 7.76 16.24L4.93 19.07C6.74 20.88 9.24 22 12 22C17.52 22 22 17.52 22 12Z" fill="#2563EB" opacity="0.15"/>
+                                        <path d="M12 6V12L16 14" stroke="#2563EB" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <span style="font-size: 8px; color: #4B5563; font-weight: 600; margin-top: 2px;">reCAPTCHA</span>
+                                    <div class="quote-recaptcha-brand-links-block" style="font-size: 8px; display: flex; gap: 4px; margin-top: 2px;">
+                                        <a href="https://www.google.com/intl/en/policies/privacy/" target="_blank" style="text-decoration: none; color: #555555;">Privacy</a>
+                                        <span>-</span>
+                                        <a href="https://www.google.com/intl/en/policies/terms/" target="_blank" style="text-decoration: none; color: #555555;">Terms</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Submit Button -->
+                        <div class="quote-submit-button-container mt-4">
+                            <button type="submit" class="btn btn-primary rounded-pill py-3 px-5 fw-bold">
+                                Submit Request <i class="fa fa-arrow-right ms-2"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Quote / Contact Section End -->
+
+<!-- Footer Start -->
+    <div class="container-fluid bg-dark text-body footer mt-5 pt-5 pb-3">
         <div class="container py-5">
             <div class="row g-5">
                 <div class="col-lg-3 col-md-6">

@@ -11,20 +11,24 @@ html {
     margin: 0 !important;
     padding: 0 !important;
     background-color: #1A2A36 !important;
+    overflow-x: hidden;
 }
 body {
     margin: 0 !important;
     padding: 0 !important;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
     background-color: #FFFFFF;
+    overflow-x: hidden;
 }
 .bg-dark {
     background-color: var(--dark, #1A2A36) !important;
 }
 .footer, footer {
-    margin-top: auto !important;
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+/* Prevent any whitespace from appearing below footer */
+body > *:last-child,
+.back-to-top ~ * {
     margin-bottom: 0 !important;
 }
 
@@ -759,6 +763,14 @@ body {
     border-right: none;
 }
 
+/* Product Carousel Card Images */
+.product-carousel .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
 /* Product Cards */
 .product-card {
     transition: .5s;
@@ -1347,4 +1359,4 @@ select.quote-input-field {
 .btn-footer-pdf:focus i,
 .btn-footer-pdf:active i {
     color: #FFFFFF !important;
-}
+}
