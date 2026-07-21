@@ -8,18 +8,24 @@
 }
 
 html {
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: #1A2A36 !important;
 }
 body {
-    margin: 0;
-    padding: 0;
+    margin: 0 !important;
+    padding: 0 !important;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #FFFFFF;
 }
-.footer {
+.bg-dark {
+    background-color: var(--dark, #1A2A36) !important;
+}
+.footer, footer {
     margin-top: auto !important;
+    margin-bottom: 0 !important;
 }
 
 /* Bootstrap Overrides for Queensol Brand Refresh */
@@ -1318,4 +1324,27 @@ select.quote-input-field {
         width: 100px;
         height: 100px;
     }
+}
+
+/* Footer Download PDF Button */
+.btn-footer-pdf {
+    color: #FFFFFF !important;
+    background-color: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    transition: all 0.3s ease-in-out !important;
+}
+
+.btn-footer-pdf:hover,
+.btn-footer-pdf:focus,
+.btn-footer-pdf:active {
+    color: #FFFFFF !important;
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    box-shadow: 0 4px 15px rgba(185, 7, 16, 0.4) !important;
+}
+
+.btn-footer-pdf:hover i,
+.btn-footer-pdf:focus i,
+.btn-footer-pdf:active i {
+    color: #FFFFFF !important;
 }
